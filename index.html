@@ -1,0 +1,1464 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HACKED - Arabx.com - Adult Site Security Breach</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts - Cairo (Bold) for Arabic support -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Three.js for 3D effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <style>
+        /* Custom CSS */
+        :root {
+            --light-bg: #f0f2f5;
+            --warning-red: #ff3547;
+            --hacker-green: #00ff00;
+            --glass-blue: #57b8ff;
+        }
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--light-bg);
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        .glitch-container {
+            position: relative;
+        }
+        
+        /* Glitch effect for text */
+        .glitch {
+            color: #333;
+            font-size: 3rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            position: relative;
+            animation: glitch-skew 1s infinite linear alternate-reverse;
+        }
+        
+        .glitch::before,
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .glitch::before {
+            color: var(--warning-red);
+            animation: glitch-anim 5s infinite linear alternate-reverse;
+            left: 2px;
+            text-shadow: -2px 0 #00fff2;
+            clip: rect(44px, 450px, 56px, 0);
+        }
+        
+        .glitch::after {
+            color: #00fff2;
+            animation: glitch-anim2 1s infinite linear alternate-reverse;
+            left: -2px;
+            text-shadow: -2px 0 var(--warning-red);
+            clip: rect(44px, 450px, 56px, 0);
+        }
+        
+        @keyframes glitch-anim {
+            0% { clip: rect(44px, 9999px, 56px, 0); transform: skew(0.2deg); }
+            5% { clip: rect(97px, 9999px, 72px, 0); transform: skew(0.1deg); }
+            10% { clip: rect(55px, 9999px, 25px, 0); transform: skew(0.8deg); }
+            15% { clip: rect(66px, 9999px, 92px, 0); transform: skew(0.5deg); }
+            20% { clip: rect(73px, 9999px, 6px, 0); transform: skew(0.7deg); }
+            25% { clip: rect(33px, 9999px, 95px, 0); transform: skew(0.5deg); }
+            30% { clip: rect(27px, 9999px, 47px, 0); transform: skew(0.2deg); }
+            35% { clip: rect(35px, 9999px, 76px, 0); transform: skew(0.3deg); }
+            40% { clip: rect(60px, 9999px, 31px, 0); transform: skew(0.4deg); }
+            45% { clip: rect(57px, 9999px, 46px, 0); transform: skew(0.6deg); }
+            50% { clip: rect(55px, 9999px, 31px, 0); transform: skew(0.7deg); }
+            55% { clip: rect(41px, 9999px, 21px, 0); transform: skew(0.3deg); }
+            60% { clip: rect(67px, 9999px, 2px, 0); transform: skew(0.2deg); }
+            65% { clip: rect(8px, 9999px, 92px, 0); transform: skew(0.5deg); }
+            70% { clip: rect(33px, 9999px, 66px, 0); transform: skew(0.1deg); }
+            75% { clip: rect(13px, 9999px, 72px, 0); transform: skew(0.6deg); }
+            80% { clip: rect(51px, 9999px, 78px, 0); transform: skew(0.8deg); }
+            85% { clip: rect(98px, 9999px, 91px, 0); transform: skew(0.4deg); }
+            90% { clip: rect(32px, 9999px, 53px, 0); transform: skew(0.5deg); }
+            95% { clip: rect(11px, 9999px, 22px, 0); transform: skew(0.7deg); }
+            100% { clip: rect(24px, 9999px, 11px, 0); transform: skew(0.3deg); }
+        }
+        
+        @keyframes glitch-anim2 {
+            0% { clip: rect(21px, 9999px, 13px, 0); transform: skew(0.1deg); }
+            5% { clip: rect(97px, 9999px, 36px, 0); transform: skew(0.8deg); }
+            10% { clip: rect(93px, 9999px, 85px, 0); transform: skew(0.4deg); }
+            15% { clip: rect(27px, 9999px, 71px, 0); transform: skew(0.7deg); }
+            20% { clip: rect(52px, 9999px, 51px, 0); transform: skew(0.2deg); }
+            25% { clip: rect(27px, 9999px, 22px, 0); transform: skew(0.5deg); }
+            30% { clip: rect(40px, 9999px, 11px, 0); transform: skew(0.3deg); }
+            35% { clip: rect(87px, 9999px, 63px, 0); transform: skew(0.2deg); }
+            40% { clip: rect(61px, 9999px, 16px, 0); transform: skew(0.8deg); }
+            45% { clip: rect(5px, 9999px, 35px, 0); transform: skew(0.6deg); }
+            50% { clip: rect(65px, 9999px, 80px, 0); transform: skew(0.4deg); }
+            55% { clip: rect(31px, 9999px, 22px, 0); transform: skew(0.5deg); }
+            60% { clip: rect(23px, 9999px, 72px, 0); transform: skew(0.3deg); }
+            65% { clip: rect(89px, 9999px, 25px, 0); transform: skew(0.2deg); }
+            70% { clip: rect(75px, 9999px, 33px, 0); transform: skew(0.7deg); }
+            75% { clip: rect(38px, 9999px, 53px, 0); transform: skew(0.5deg); }
+            80% { clip: rect(11px, 9999px, 44px, 0); transform: skew(0.6deg); }
+            85% { clip: rect(24px, 9999px, 61px, 0); transform: skew(0.8deg); }
+            90% { clip: rect(65px, 9999px, 71px, 0); transform: skew(0.3deg); }
+            95% { clip: rect(90px, 9999px, 14px, 0); transform: skew(0.4deg); }
+            100% { clip: rect(34px, 9999px, 35px, 0); transform: skew(0.2deg); }
+        }
+        
+        @keyframes glitch-skew {
+            0% { transform: skew(1deg); }
+            10% { transform: skew(-2deg); }
+            20% { transform: skew(4deg); }
+            30% { transform: skew(-3deg); }
+            40% { transform: skew(2deg); }
+            50% { transform: skew(0deg); }
+            60% { transform: skew(-1deg); }
+            70% { transform: skew(3deg); }
+            80% { transform: skew(-4deg); }
+            90% { transform: skew(1deg); }
+            100% { transform: skew(-2deg); }
+        }
+        
+        /* Glass breaking effect */
+        .glass-container {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        
+        .glass {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(6px);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        /* Pixel animation effect */
+        .pixel-container {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        
+        .pixel {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: var(--hacker-green);
+            opacity: 0;
+            transform: translateY(100px);
+            animation: pixel-fall 2s infinite;
+        }
+        
+        @keyframes pixel-fall {
+            0% {
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+            20% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(300px);
+            }
+        }
+        
+        /* Warning badge styling */
+        .warning-badge {
+            background-color: var(--warning-red);
+            color: white;
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        /* Logo styling */
+        .logo-container {
+            margin: 30px 0;
+            filter: grayscale(0.5) contrast(1.2);
+            position: relative;
+        }
+        
+        .logo-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255,0,0,0.2) 0%, rgba(0,0,255,0.2) 100%);
+            mix-blend-mode: overlay;
+            pointer-events: none;
+        }
+        
+        /* Noise overlay */
+        .noise {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 100;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+        
+        /* Footer styling */
+        .footer {
+            margin-top: 50px;
+            padding: 20px 0;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+        
+        /* Custom cursor */
+        .custom-cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: rgba(255, 53, 71, 0.5);
+            pointer-events: none;
+            z-index: 9999;
+            mix-blend-mode: difference;
+            transform: translate(-50%, -50%);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .glitch {
+                font-size: 2rem;
+            }
+            
+            .glass-container, .pixel-container {
+                height: 150px;
+            }
+        }
+        
+        .arabx-content {
+            position: relative;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        
+        .arabx-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255,0,0,0.05) 0%, rgba(0,0,255,0.05) 100%);
+            pointer-events: none;
+        }
+        
+        .color-text {
+            background: linear-gradient(45deg, #ff3547, #1266f1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 900;
+        }
+        
+        .audio-control {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            font-size: 1.5rem;
+            cursor: pointer;
+            background: rgba(255,255,255,0.8);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .audio-control:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Adult site theme */
+        :root {
+            --bg-color: #111111;
+            --text-color: #ffffff;
+            --accent-color: #ff3366;
+            --secondary-color: #9400d3;
+            --adult-pink: #ff69b4;
+            --adult-purple: #800080;
+        }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        
+        /* Language switcher */
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: rgba(255,255,255,0.1);
+            border-radius: 30px;
+            padding: 5px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid var(--accent-color);
+        }
+        
+        .language-switcher span {
+            padding: 5px 10px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .language-switcher span.active {
+            background-color: var(--accent-color);
+            color: white;
+        }
+        
+        .language-switcher:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Pixel Cursor */
+        .pixel-cursor {
+            width: 20px;
+            height: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: transparent;
+            z-index: 10000;
+            pointer-events: none;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            transform: translate(-50%, -50%);
+        }
+        
+        .pixel-cursor-bit {
+            width: 100%;
+            height: 100%;
+            background-color: var(--accent-color);
+        }
+        
+        /* API data display */
+        .api-data-container {
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--accent-color);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            overflow: hidden;
+        }
+        
+        .api-data-container h3 {
+            color: var(--accent-color);
+            border-bottom: 1px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        .data-table th {
+            background-color: rgba(255, 51, 102, 0.2);
+            color: white;
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid var(--accent-color);
+        }
+        
+        .data-table td {
+            padding: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .data-table tr:hover {
+            background-color: rgba(255, 51, 102, 0.1);
+        }
+        
+        /* Download stolen data button */
+        .download-data {
+            background: linear-gradient(45deg, var(--accent-color), var(--secondary-color));
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 20px 0;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .download-data::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: all 0.5s ease;
+        }
+        
+        .download-data:hover::before {
+            left: 100%;
+        }
+        
+        .download-data:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        }
+        
+        /* 3D container for Three.js */
+        #threejs-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+        }
+        
+        /* Adult site elements */
+        .adult-badge {
+            background-color: var(--adult-pink);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        
+        .adult-badge.premium {
+            background-color: var(--adult-purple);
+        }
+        
+        .adult-content-warning {
+            border: 2px dashed var(--accent-color);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            background-color: rgba(255, 51, 102, 0.1);
+            position: relative;
+        }
+        
+        .adult-content-warning::before {
+            content: '18+';
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        /* Terminal effect */
+        .terminal {
+            background-color: #0d1117;
+            color: #e6edf3;
+            padding: 20px;
+            border-radius: 5px;
+            font-family: monospace;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .terminal::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: repeating-linear-gradient(
+                to right,
+                transparent,
+                transparent 50%,
+                #e6edf3 50%,
+                #e6edf3 100%
+            );
+            background-size: 10px 2px;
+            animation: terminal-scan 3s linear infinite;
+        }
+        
+        @keyframes terminal-scan {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(300px);
+            }
+        }
+        
+        .terminal-text {
+            margin: 0;
+            line-height: 1.5;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+            border-right: 2px solid #e6edf3;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #e6edf3 }
+        }
+    </style>
+</head>
+<body>
+    <!-- Three.js container -->
+    <div id="threejs-container"></div>
+    
+    <!-- Pixel cursor -->
+    <div class="pixel-cursor" id="pixelCursor"></div>
+    
+    <!-- Custom cursor (fallback) -->
+    <div class="custom-cursor"></div>
+    
+    <!-- Language switcher -->
+    <div class="language-switcher" id="languageSwitcher">
+        <span class="active" data-lang="en">EN</span>
+        <span data-lang="ar">AR</span>
+    </div>
+    
+    <!-- Audio control -->
+    <div class="audio-control" id="audioControl">
+        <i class="fas fa-volume-up" id="audioIcon"></i>
+    </div>
+    
+    <!-- Noise overlay -->
+    <div class="noise"></div>
+    
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-10 text-center">
+                <!-- Adult site warning -->
+                <div class="adult-content-warning mb-4">
+                    <span class="lang-en">This adult content website has been compromised. All user data and content has been leaked.</span>
+                    <span class="lang-ar" style="display:none;">تم اختراق موقع المحتوى للبالغين هذا. تم تسريب جميع بيانات المستخدم والمحتوى.</span>
+                </div>
+                
+                <!-- Warning Badge -->
+                <div class="warning-badge shadow">
+                    <i class="fas fa-exclamation-triangle me-2"></i> <span class="lang-en">SECURITY BREACH</span><span class="lang-ar" style="display:none;">اختراق أمني</span>
+                </div>
+                
+                <!-- Main Title with Glitch Effect -->
+                <div class="glitch-container mb-4">
+                    <h1 class="glitch" data-text="HACKED"><span class="lang-en">HACKED</span><span class="lang-ar" style="display:none;">تم الاختراق</span></h1>
+                </div>
+                
+                <!-- Main message -->
+                <div class="arabx-content mb-5">
+                    <h2 class="mb-4 fw-bold">
+                        <span class="adult-badge">XXX</span>
+                        <span class="adult-badge premium">PREMIUM</span>
+                        <span class="lang-en">This adult site was hacked by <span class="color-text">Mustafa Zeth</span></span>
+                        <span class="lang-ar" style="display:none;">تم اختراق هذا الموقع بواسطة <span class="color-text">مصطفى زيث</span></span>
+                    </h2>
+                    <p class="fs-4 mb-4">
+                        <span class="lang-en">All adult content, user data, credit cards, and subscription information has been leaked.</span>
+                        <span class="lang-ar" style="display:none;">تم تسريب جميع المحتوى، بيانات المستخدمين، بطاقات الائتمان، ومعلومات الاشتراك.</span>
+                    </p>
+                    <p class="fs-4">
+                        <span class="lang-en">You can't follow up bastard Kawad.</span>
+                        <span class="lang-ar" style="display:none;">لا يمكنك المتابعة أيها الوغد.</span>
+                    </p>
+                </div>
+                
+                <!-- Terminal effect -->
+                <div class="terminal">
+                    <p class="terminal-text">$ sudo hack_website --target=arabx.com --mode=leakall</p>
+                    <p class="terminal-text">$ accessing adult content database...</p>
+                    <p class="terminal-text">$ extracting user credentials and payment information...</p>
+                    <p class="terminal-text">$ bypassing premium content protection...</p>
+                    <p class="terminal-text">$ data extraction complete. leaking all adult files to dark web...</p>
+                </div>
+                
+                <!-- API Data display -->
+                <div class="api-data-container" id="apiDataContainer">
+                    <h3>
+                        <span class="lang-en">LEAKED DATABASE INFORMATION</span>
+                        <span class="lang-ar" style="display:none;">معلومات قاعدة البيانات المسربة</span>
+                    </h3>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="text-start mb-3">
+                                <span class="lang-en">Users</span>
+                                <span class="lang-ar" style="display:none;">المستخدمين</span>
+                            </h4>
+                            <div class="table-responsive">
+                                <table class="data-table" id="usersTable">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Username</th>
+                                            <th>Email</th>
+                                            <th>Password Hash</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="4" class="text-center">
+                                                <span class="lang-en">Loading data...</span>
+                                                <span class="lang-ar" style="display:none;">جار تحميل البيانات...</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mt-4">
+                            <h4 class="text-start mb-3">
+                                <span class="lang-en">Credit Cards</span>
+                                <span class="lang-ar" style="display:none;">بطاقات الائتمان</span>
+                            </h4>
+                            <div class="table-responsive">
+                                <table class="data-table" id="cardsTable">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>User ID</th>
+                                            <th>Card Number</th>
+                                            <th>Expiry Date</th>
+                                            <th>CVV</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="5" class="text-center">
+                                                <span class="lang-en">Loading data...</span>
+                                                <span class="lang-ar" style="display:none;">جار تحميل البيانات...</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Download data button -->
+                    <div class="download-data" id="downloadData">
+                        <i class="fas fa-download me-2"></i> 
+                        <span class="lang-en">DOWNLOAD COMPLETE DATABASE</span>
+                        <span class="lang-ar" style="display:none;">تحميل قاعدة البيانات الكاملة</span>
+                    </div>
+                </div>
+                
+                <!-- Pixel animation container -->
+                <div class="pixel-container" id="pixelContainer"></div>
+                
+                <!-- Glass breaking effect container -->
+                <div class="glass-container" id="glassContainer"></div>
+                
+                <!-- Logo container -->
+                <div class="logo-container">
+                    <svg width="300" height="100" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+                        <text x="10" y="60" font-family="Arial" font-size="40" font-weight="bold">
+                            <tspan fill="#C41E3A">arab</tspan><tspan fill="#000">x.com</tspan>
+                        </text>
+                        <rect x="5" y="70" width="290" height="2" fill="#333"/>
+                        <text x="50" y="90" font-family="Arial" font-size="12" fill="#666">ALL RIGHTS LEAKED 2025</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="m-0">All rights leaked 2025</p>
+        </div>
+    </footer>
+    
+    <!-- Audio element for sound effect -->
+    <audio id="hackSound" preload="auto">
+        <source src="data:audio/mp3;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4Ljc2LjEwMAAAAAAAAAAAAAAA//tAwAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAASAAAeMwAUFBQUFCIiIiIiIjAwMDAwMD4+Pj4+PkxMTExMTFpaWlpaWmhoaGhoaHZ2dnZ2doSEhISEhJKSkpKSkqCgoKCgoK6urq6urrKysr6+vr6+vsbGxsbGxtDQ0NDQ0N7e3t7e3ure3t7e3t7m5ubm5uvr6+vr6/b29vb29v////8AAAAATGF2YzU4LjEzAAAAAAAAAAAAAAAAJAYdAAAAAAAAHjOZTf9/AAAAAAAAAAAAAAAAAAAAAP/7UMQAAAk4UYu9DCANrxQ/P1NkAQAYl3+XAAC4AFh/gL27d3d3d3d/7u4d3d+WQfR///JYPh+H4fD4fLkAAAAEXAYqlVMdQhDoYhlKx7txEz00B+L69gIpBlYuJ8iJKkOUknMc0yhpPKCMftLf+n/v/35L/9v//7N/+n9qdb///wgIDB4cGPifOfPlwgDAxP/7UMQmAAsE1Y/wkgAgqA6x/hJABIl3u7u7vd3d7ve8/9u4eCANlYAaDFNRAAMXMxWICgMnKtkJkcKjhT6RSb75QQEPnFBVNwwkHUQzFxFIR1j///LFjf//////////6QiQKQZhoGGcYoGGTDP/1P/QIPl4cL/7UMQpgAoYKXn4eQABIw8vPw8gAOb//8k6t0pMMFAENYQII0zKrMlkBMSSDkbeJOc42Y4YD4o16Lo5WgFjwcLzgA0ey8CAwbD/cFCg8XPTkv9/JB8v8MuiQLkCZEGCqZbBM/IJ5LK3//tQxC4AC9BVa/nJAAGWD7F/OSAAZNkyVoc8JCkGtA9JChSipsi46lE5iQsXNBElKOlkNrx5TtKlIgyZEmkuNnRMlumih///EupoXRIJqUP////////////z4kDQJjIQhE1ESKWU/BZf//tQxDMACuwpa/nHAAGACzB/OMAApZUN0S0zbJSV2NBEAN9XXpAAYAD/jQQ1nSPAmJ5sWDz24TFM0XQR5HAuukHC25M5n+5jif3Mzkv///7S///////////+fEQYJZUSLMlJ0nZPnk3N//tQxDuAC7RJdfxhAAF1CS8/jCAAMXLnZHJWnLnpTHOdCIIPvHyEVS4KZEzJCKg8lZCye1oozc6dvIwOCQUDyVcw7PIzv/TP//2Tf/7f//8/9P/f+cJBLf/JJJFkiooy/7/9iVMQU1FMy//7UMQ+gAuISXn8YQABVQ8vPwwgADkxVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVX/+1DEQwAMIElr+TcARvYTr381QBVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV" type="audio/mp3">
+    </audio>
+    
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Wait for the DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Audio control
+            const hackSound = document.getElementById('hackSound');
+            const audioControl = document.getElementById('audioControl');
+            const audioIcon = document.getElementById('audioIcon');
+            let isPlaying = false;
+            
+            // Create custom audio for "Hhhhh" sound using Web Audio API
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            const hhhhhBuffer = createHhhhhSound(audioContext);
+            
+            // Function to create "Hhhhh" sound
+            function createHhhhhSound(context) {
+                const oscillator = context.createOscillator();
+                const gainNode = context.createGain();
+                
+                oscillator.type = 'sawtooth';
+                oscillator.frequency.setValueAtTime(200, context.currentTime);
+                oscillator.frequency.exponentialRampToValueAtTime(100, context.currentTime + 1);
+                
+                gainNode.gain.setValueAtTime(0.1, context.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, context.currentTime + 1);
+                
+                oscillator.connect(gainNode);
+                gainNode.connect(context.destination);
+                
+                oscillator.start();
+                oscillator.stop(context.currentTime + 1);
+                
+                return { oscillator, gainNode };
+            }
+            
+            // Function to play "Hhhhh" sound
+            function playHhhhhSound() {
+                createHhhhhSound(audioContext);
+                
+                // Schedule the next sound with random delay
+                setTimeout(playHhhhhSound, Math.random() * 5000 + 3000);
+            }
+            
+            // Toggle audio
+            audioControl.addEventListener('click', function() {
+                if (isPlaying) {
+                    hackSound.pause();
+                    audioIcon.classList.remove('fa-volume-mute');
+                    audioIcon.classList.add('fa-volume-up');
+                    isPlaying = false;
+                } else {
+                    hackSound.loop = true;
+                    hackSound.play();
+                    playHhhhhSound(); // Start playing the Hhhhh sound
+                    audioIcon.classList.remove('fa-volume-up');
+                    audioIcon.classList.add('fa-volume-mute');
+                    isPlaying = true;
+                }
+            });
+            
+            // Automatically play sound after a brief delay (browsers often block autoplay)
+            setTimeout(function() {
+                audioControl.click();
+            }, 1000);
+            
+            // Create pixels for animation
+            const pixelContainer = document.getElementById('pixelContainer');
+            for (let i = 0; i < 50; i++) {
+                const pixel = document.createElement('div');
+                pixel.classList.add('pixel');
+                pixel.style.left = `${Math.random() * 100}%`;
+                pixel.style.animationDelay = `${Math.random() * 2}s`;
+                pixelContainer.appendChild(pixel);
+            }
+            
+            // Create glass breaking effect
+            const glassContainer = document.getElementById('glassContainer');
+            for (let i = 0; i < 15; i++) {
+                const glass = document.createElement('div');
+                glass.classList.add('glass');
+                
+                // Random size and position
+                const size = Math.random() * 100 + 50;
+                glass.style.width = `${size}px`;
+                glass.style.height = `${size}px`;
+                glass.style.left = `${Math.random() * 90}%`;
+                glass.style.top = `${Math.random() * 70}%`;
+                glass.style.transform = `rotate(${Math.random() * 360}deg)`;
+                
+                glassContainer.appendChild(glass);
+                
+                // Animate glass shard
+                setTimeout(() => {
+                    glass.style.transform = `translate(${Math.random() * 200 - 100}px, ${Math.random() * 200 - 100}px) rotate(${Math.random() * 720}deg)`;
+                    glass.style.opacity = 0;
+                }, 500 + Math.random() * 2000);
+            }
+            
+            // Pixel cursor implementation
+            const pixelCursor = document.getElementById('pixelCursor');
+            
+            // Create pixel cursor bits
+            for (let i = 0; i < 16; i++) {
+                const bit = document.createElement('div');
+                bit.classList.add('pixel-cursor-bit');
+                
+                // Randomly make some bits transparent for pixelated effect
+                if (Math.random() > 0.7) {
+                    bit.style.opacity = '0';
+                }
+                
+                pixelCursor.appendChild(bit);
+            }
+            
+            // Custom cursor fallback and pixel cursor movement
+            const cursor = document.querySelector('.custom-cursor');
+            
+            document.addEventListener('mousemove', function(e) {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+                
+                pixelCursor.style.left = e.clientX + 'px';
+                pixelCursor.style.top = e.clientY + 'px';
+                
+                // Randomly change pixel cursor pattern while moving
+                if (Math.random() > 0.95) {
+                    Array.from(pixelCursor.children).forEach(bit => {
+                        bit.style.opacity = Math.random() > 0.7 ? '0' : '1';
+                    });
+                }
+            });
+            
+            // Fetch and display data from the API
+            async function fetchData() {
+                try {
+                    const response = await fetch('/api/data');
+                    const data = await response.json();
+                    
+                    // Display users data
+                    const usersTable = document.getElementById('usersTable');
+                    const usersTableBody = usersTable.querySelector('tbody');
+                    usersTableBody.innerHTML = '';
+                    
+                    data.users.forEach(user => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${user.id}</td>
+                            <td>${user.username}</td>
+                            <td>${user.email}</td>
+                            <td>${user.password_hash}</td>
+                        `;
+                        usersTableBody.appendChild(row);
+                    });
+                    
+                    // Display credit cards data
+                    const cardsTable = document.getElementById('cardsTable');
+                    const cardsTableBody = cardsTable.querySelector('tbody');
+                    cardsTableBody.innerHTML = '';
+                    
+                    data.credit_cards.forEach(card => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${card.id}</td>
+                            <td>${card.user_id}</td>
+                            <td>${card.card_number}</td>
+                            <td>${card.expiry_date}</td>
+                            <td>${card.cvv}</td>
+                        `;
+                        cardsTableBody.appendChild(row);
+                    });
+                } catch (error) {
+                    console.error('Error fetching data:', error);
+                    
+                    // Display sample data if API fails
+                    displaySampleData();
+                }
+            }
+            
+            // Display sample data if API fails
+            function displaySampleData() {
+                // Sample users data
+                const usersTable = document.getElementById('usersTable');
+                const usersTableBody = usersTable.querySelector('tbody');
+                usersTableBody.innerHTML = '';
+                
+                const sampleUsers = [
+                    { id: 1, username: 'admin', email: 'admin@arabx.com', password_hash: '$2b$12$J9MmvqvLIC7MABLoGU2XH.E6TIPIHxX8t0FZx4Bdpy1N' },
+                    { id: 2, username: 'ahmed_93', email: 'ahmed@gmail.com', password_hash: '$2b$12$HXAtnvQBG8XCQeJH4NRtGuVCr' },
+                    { id: 3, username: 'fatima_92', email: 'fatima@hotmail.com', password_hash: '$2b$12$Lk9XAtn1qKVfGJH4QT9YU' }
+                ];
+                
+                sampleUsers.forEach(user => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${user.id}</td>
+                        <td>${user.username}</td>
+                        <td>${user.email}</td>
+                        <td>${user.password_hash}</td>
+                    `;
+                    usersTableBody.appendChild(row);
+                });
+                
+                // Sample credit cards data
+                const cardsTable = document.getElementById('cardsTable');
+                const cardsTableBody = cardsTable.querySelector('tbody');
+                cardsTableBody.innerHTML = '';
+                
+                const sampleCards = [
+                    { id: 1, user_id: 1, card_number: '4532 9876 5432 1098', expiry_date: '05/27', cvv: '123' },
+                    { id: 2, user_id: 2, card_number: '5432 8765 4321 0987', expiry_date: '12/26', cvv: '456' }
+                ];
+                
+                sampleCards.forEach(card => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${card.id}</td>
+                        <td>${card.user_id}</td>
+                        <td>${card.card_number}</td>
+                        <td>${card.expiry_date}</td>
+                        <td>${card.cvv}</td>
+                    `;
+                    cardsTableBody.appendChild(row);
+                });
+            }
+            
+            // Load data when page loads
+            fetchData();
+            
+            // Theme switcher functionality
+            const themeButtons = document.querySelectorAll('.theme-btn');
+            themeButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const theme = this.getAttribute('data-theme');
+                    document.body.className = '';
+                    document.body.classList.add(`${theme}-theme`);
+                    
+                    // Add glitch effect when changing themes
+                    const glitch = document.querySelector('.glitch');
+                    glitch.style.animation = 'none';
+                    setTimeout(() => {
+                        glitch.style.animation = '';
+                    }, 10);
+                    
+                    // Create distortion effect when changing themes
+                    createGlassBreakEffect();
+                });
+            });
+            
+            // Language switcher functionality
+            const languageSwitcher = document.getElementById('languageSwitcher');
+            languageSwitcher.addEventListener('click', function(e) {
+                if (e.target.tagName === 'SPAN') {
+                    const lang = e.target.getAttribute('data-lang');
+                    
+                    // Update active class
+                    document.querySelectorAll('#languageSwitcher span').forEach(span => {
+                        span.classList.remove('active');
+                    });
+                    e.target.classList.add('active');
+                    
+                    // Toggle language elements
+                    document.querySelectorAll('.lang-en, .lang-ar').forEach(el => {
+                        el.style.display = 'none';
+                    });
+                    document.querySelectorAll(`.lang-${lang}`).forEach(el => {
+                        el.style.display = 'inline-block';
+                    });
+                    
+                    // Update direction for Arabic
+                    if (lang === 'ar') {
+                        document.body.style.direction = 'rtl';
+                        document.querySelectorAll('.text-start').forEach(el => {
+                            el.classList.remove('text-start');
+                            el.classList.add('text-end');
+                        });
+                    } else {
+                        document.body.style.direction = 'ltr';
+                        document.querySelectorAll('.text-end').forEach(el => {
+                            el.classList.remove('text-end');
+                            el.classList.add('text-start');
+                        });
+                    }
+                    
+                    // Update glitch text
+                    const glitch = document.querySelector('.glitch');
+                    glitch.setAttribute('data-text', lang === 'en' ? 'WARNING' : 'تحذير');
+                }
+            });
+            
+            // Safe exit button functionality
+            const safeExit = document.getElementById('safeExit');
+            safeExit.addEventListener('click', function() {
+                // Create confirmation popup before exiting
+                const confirmExit = createPopup(
+                    '<span class="lang-en">Are you sure you want to exit?</span>' +
+                    '<span class="lang-ar" style="display:none;">هل أنت متأكد أنك تريد الخروج؟</span>',
+                    false
+                );
+                
+                // Add exit and cancel buttons
+                const buttonContainer = document.createElement('div');
+                buttonContainer.className = 'mt-4 d-flex justify-content-center gap-3';
+                
+                const cancelBtn = document.createElement('button');
+                cancelBtn.className = 'btn btn-secondary';
+                cancelBtn.innerHTML = '<span class="lang-en">Cancel</span><span class="lang-ar" style="display:none;">إلغاء</span>';
+                cancelBtn.onclick = function() {
+                    closePopup(confirmExit);
+                    
+                    // Show scary popup after cancel
+                    setTimeout(() => {
+                        createPopup(
+                            '<span class="lang-en">YOU CANNOT ESCAPE!</span>' +
+                            '<span class="lang-ar" style="display:none;">لا يمكنك الهروب!</span>',
+                            true
+                        );
+                    }, 500);
+                };
+                
+                const exitBtn = document.createElement('button');
+                exitBtn.className = 'btn btn-danger';
+                exitBtn.innerHTML = '<span class="lang-en">Exit</span><span class="lang-ar" style="display:none;">خروج</span>';
+                exitBtn.onclick = function() {
+                    window.location.href = 'https://www.google.com';
+                };
+                
+                buttonContainer.appendChild(cancelBtn);
+                buttonContainer.appendChild(exitBtn);
+                confirmExit.querySelector('.popup-content').appendChild(buttonContainer);
+                
+                // Update language display
+                const activeLang = document.querySelector('#languageSwitcher span.active').getAttribute('data-lang');
+                document.querySelectorAll('.lang-en, .lang-ar').forEach(el => {
+                    el.style.display = 'none';
+                });
+                document.querySelectorAll(`.lang-${activeLang}`).forEach(el => {
+                    el.style.display = 'inline-block';
+                });
+            });
+            
+            // Download leaked data button functionality
+            const downloadData = document.getElementById('downloadData');
+            downloadData.addEventListener('click', function() {
+                // Generate fake DB content
+                const fakeDBContent = createFakeDBContent();
+                
+                // Create a blob with the content
+                const blob = new Blob([fakeDBContent], {type: 'application/octet-stream'});
+                const url = URL.createObjectURL(blob);
+                
+                // Create a temporary link to download the file
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'arabx_leaked_data.sql';
+                document.body.appendChild(a);
+                a.click();
+                
+                // Clean up
+                setTimeout(() => {
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(url);
+                    
+                    // Show scary popup after download
+                    createPopup(
+                        '<span class="lang-en">DATA DOWNLOADED<br>Your IP address has been recorded: ' + getRandomIP() + '</span>' +
+                        '<span class="lang-ar" style="display:none;">تم تنزيل البيانات<br>تم تسجيل عنوان IP الخاص بك: ' + getRandomIP() + '</span>',
+                        true
+                    );
+                }, 1000);
+            });
+            
+            // Function to create a popup
+            function createPopup(content, unclosable = false) {
+                const popup = document.createElement('div');
+                popup.className = 'popup-overlay' + (unclosable ? ' unclosable' : '');
+                
+                const popupContent = document.createElement('div');
+                popupContent.className = 'popup-content';
+                popupContent.innerHTML = content;
+                
+                if (!unclosable) {
+                    const closeBtn = document.createElement('div');
+                    closeBtn.className = 'popup-close';
+                    closeBtn.innerHTML = '<i class="fas fa-times"></i>';
+                    closeBtn.onclick = function() {
+                        closePopup(popup);
+                    };
+                    popupContent.appendChild(closeBtn);
+                }
+                
+                popup.appendChild(popupContent);
+                document.body.appendChild(popup);
+                
+                // Show the popup with animation
+                setTimeout(() => {
+                    popup.classList.add('active');
+                }, 10);
+                
+                return popup;
+            }
+            
+            // Function to close a popup
+            function closePopup(popup) {
+                popup.classList.remove('active');
+                setTimeout(() => {
+                    document.body.removeChild(popup);
+                }, 300);
+            }
+            
+            // Glass break effect
+            function createGlassBreakEffect() {
+                const glassContainer = document.getElementById('glassContainer');
+                
+                // Clear previous shards
+                glassContainer.innerHTML = '';
+                
+                for (let i = 0; i < 15; i++) {
+                    const glass = document.createElement('div');
+                    glass.classList.add('glass');
+                    
+                    // Random size and position
+                    const size = Math.random() * 100 + 50;
+                    glass.style.width = `${size}px`;
+                    glass.style.height = `${size}px`;
+                    glass.style.left = `${Math.random() * 90}%`;
+                    glass.style.top = `${Math.random() * 70}%`;
+                    glass.style.transform = `rotate(${Math.random() * 360}deg)`;
+                    
+                    glassContainer.appendChild(glass);
+                    
+                    // Animate glass shard
+                    setTimeout(() => {
+                        glass.style.transform = `translate(${Math.random() * 200 - 100}px, ${Math.random() * 200 - 100}px) rotate(${Math.random() * 720}deg)`;
+                        glass.style.opacity = 0;
+                    }, 100 + Math.random() * 1000);
+                }
+            }
+            
+            // Function to create fake DB content
+            function createFakeDBContent() {
+                // Create SQL dump header
+                let content = `-- Arabx.com database dump
+-- Hacked by Mustafa Zeth
+-- Date: ${new Date().toISOString().split('T')[0]}
+-- Leaking all tables
+
+CREATE TABLE users (
+  id INT PRIMARY KEY,
+  username VARCHAR(255),
+  password VARCHAR(255),
+  email VARCHAR(255),
+  admin BOOLEAN
+);
+
+CREATE TABLE credit_cards (
+  id INT PRIMARY KEY,
+  user_id INT,
+  card_number VARCHAR(255),
+  expiry VARCHAR(7),
+  cvv VARCHAR(3),
+  FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+CREATE TABLE personal_info (
+  id INT PRIMARY KEY,
+  user_id INT,
+  full_name VARCHAR(255),
+  address VARCHAR(255),
+  phone VARCHAR(20),
+  dob DATE,
+  ssn VARCHAR(11),
+  FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+-- Dumping data for table 'users'
+INSERT INTO users VALUES (1, 'admin', 'arabx_admin_2025!', 'admin@arabx.com', TRUE);
+`;
+                
+                // Generate fake users
+                const fakeNames = ['mohammed', 'ahmed', 'fatima', 'ali', 'mariam', 'yousef', 'layla', 'omar', 'sarah', 'khalid'];
+                const fakeDomains = ['gmail.com', 'hotmail.com', 'yahoo.com', 'outlook.com', 'icloud.com'];
+                
+                for (let i = 2; i <= 50; i++) {
+                    const name = fakeNames[Math.floor(Math.random() * fakeNames.length)];
+                    const domain = fakeDomains[Math.floor(Math.random() * fakeDomains.length)];
+                    const isAdmin = Math.random() > 0.9;
+                    
+                    content += `INSERT INTO users VALUES (${i}, '${name}${Math.floor(Math.random() * 1000)}', '${generateFakePassword()}', '${name}${Math.floor(Math.random() * 1000)}@${domain}', ${isAdmin});\n`;
+                }
+                
+                // Generate fake credit cards
+                content += `\n-- Dumping data for table 'credit_cards'\n`;
+                for (let i = 1; i <= 30; i++) {
+                    const userId = Math.floor(Math.random() * 50) + 1;
+                    const cardNumber = generateFakeCreditCard();
+                    const expiryMonth = Math.floor(Math.random() * 12) + 1;
+                    const expiryYear = Math.floor(Math.random() * 5) + 23;
+                    const cvv = Math.floor(Math.random() * 900) + 100;
+                    
+                    content += `INSERT INTO credit_cards VALUES (${i}, ${userId}, '${cardNumber}', '${expiryMonth.toString().padStart(2, '0')}/${expiryYear}', '${cvv}');\n`;
+                }
+                
+                // Generate fake personal info
+                content += `\n-- Dumping data for table 'personal_info'\n`;
+                for (let i = 1; i <= 40; i++) {
+                    const userId = Math.floor(Math.random() * 50) + 1;
+                    const fullName = generateFakeFullName();
+                    const address = generateFakeAddress();
+                    const phone = generateFakePhone();
+                    const dob = generateFakeDate();
+                    const ssn = generateFakeSSN();
+                    
+                    content += `INSERT INTO personal_info VALUES (${i}, ${userId}, '${fullName}', '${address}', '${phone}', '${dob}', '${ssn}');\n`;
+                }
+                
+                return content;
+            }
+            
+            // Helper functions for fake data
+            function generateFakePassword() {
+                const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()';
+                let password = '';
+                for (let i = 0; i < 10; i++) {
+                    password += chars.charAt(Math.floor(Math.random() * chars.length));
+                }
+                return password;
+            }
+            
+            function generateFakeCreditCard() {
+                const prefixes = ['4', '5', '37', '34', '6011', '3'];
+                const prefix = prefixes[Math.floor(Math.random() * prefixes.length)];
+                let number = prefix;
+                
+                while (number.length < 16) {
+                    number += Math.floor(Math.random() * 10);
+                }
+                
+                // Format with spaces
+                return number.replace(/(.{4})/g, '$1 ').trim();
+            }
+            
+            function generateFakeFullName() {
+                const firstNames = ['Mohammed', 'Ahmed', 'Fatima', 'Ali', 'Mariam', 'Yousef', 'Layla', 'Omar', 'Sarah', 'Khalid', 'Noor', 'Ibrahim', 'Aisha', 'Hassan', 'Zainab'];
+                const lastNames = ['Al-Saud', 'Khan', 'Al-Farsi', 'Al-Malik', 'Al-Hashemi', 'Al-Zahrani', 'Al-Qurashi', 'Al-Ghamdi', 'Al-Sulaiman', 'Al-Yousef'];
+                
+                const firstName = firstNames[Math.floor(Math.random() * firstNames.length)];
+                const lastName = lastNames[Math.floor(Math.random() * lastNames.length)];
+                
+                return `${firstName} ${lastName}`;
+            }
+            
+            function generateFakeAddress() {
+                const streets = ['King Fahd Road', 'Prince Sultan Street', 'Olaya Street', 'Tahlia Street', 'Al-Urubah Road', 'Imam Abdullah Ibn Saud'];
+                const cities = ['Riyadh', 'Jeddah', 'Dammam', 'Mecca', 'Medina', 'Khobar', 'Taif', 'Tabuk', 'Abha'];
+                
+                const number = Math.floor(Math.random() * 9000) + 1000;
+                const street = streets[Math.floor(Math.random() * streets.length)];
+                const city = cities[Math.floor(Math.random() * cities.length)];
+                
+                return `${number} ${street}, ${city}`;
+            }
+            
+            function generateFakePhone() {
+                return '+966 5' + Math.floor(Math.random() * 10) + ' ' + 
+                    Math.floor(Math.random() * 10000000).toString().padStart(7, '0');
+            }
+            
+            function generateFakeDate() {
+                const year = Math.floor(Math.random() * 40) + 1960;
+                const month = Math.floor(Math.random() * 12) + 1;
+                const day = Math.floor(Math.random() * 28) + 1;
+                
+                return `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
+            }
+            
+            function generateFakeSSN() {
+                return Math.floor(Math.random() * 1000000000).toString().padStart(9, '0');
+            }
+            
+            function getRandomIP() {
+                return `${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}`;
+            }
+            
+            // Three.js implementation
+            let scene, camera, renderer, particles;
+            
+            function initThreeJS() {
+                const container = document.getElementById('threejs-container');
+                
+                // Create scene
+                scene = new THREE.Scene();
+                
+                // Create camera
+                camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+                camera.position.z = 5;
+                
+                // Create renderer
+                renderer = new THREE.WebGLRenderer({ alpha: true });
+                renderer.setSize(window.innerWidth, window.innerHeight);
+                renderer.setClearColor(0x000000, 0);
+                container.appendChild(renderer.domElement);
+                
+                // Create particles
+                const geometry = new THREE.BufferGeometry();
+                const vertices = [];
+                
+                for (let i = 0; i < 5000; i++) {
+                    // Create stars distributed in a sphere
+                    const x = (Math.random() - 0.5) * 10;
+                    const y = (Math.random() - 0.5) * 10;
+                    const z = (Math.random() - 0.5) * 10;
+                    
+                    vertices.push(x, y, z);
+                }
+                
+                geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+                
+                // Create material
+                const material = new THREE.PointsMaterial({
+                    size: 0.05,
+                    color: 0x00ff00, // Hacker green
+                    transparent: true,
+                    opacity: 0.7
+                });
+                
+                // Create particle system
+                particles = new THREE.Points(geometry, material);
+                scene.add(particles);
+                
+                // Add event listener for window resize
+                window.addEventListener('resize', onWindowResize, false);
+                
+                // Start animation
+                animate();
+            }
+            
+            function onWindowResize() {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            }
+            
+            function animate() {
+                requestAnimationFrame(animate);
+                
+                // Rotate particles
+                particles.rotation.x += 0.001;
+                particles.rotation.y += 0.002;
+                
+                renderer.render(scene, camera);
+            }
+            
+            // Initialize Three.js scene
+            initThreeJS();
+            
+            // Create initial popups
+            setTimeout(() => {
+                createPopup(
+                    '<span class="lang-en"><h4>WARNING: YOU HAVE BEEN HACKED</h4><p>Your computer has been compromised.</p></span>' +
+                    '<span class="lang-ar" style="display:none;"><h4>تحذير: تم اختراق جهازك</h4><p>تم اختراق جهاز الكمبيوتر الخاص بك.</p></span>',
+                    true
+                );
+            }, 3000);
+            
+            // Create random popups every few seconds
+            setInterval(() => {
+                if (Math.random() > 0.7) {
+                    const messages = [
+                        '<span class="lang-en">Your files are being encrypted!</span><span class="lang-ar" style="display:none;">يتم تشفير ملفاتك!</span>',
+                        '<span class="lang-en">Password database compromised!</span><span class="lang-ar" style="display:none;">تم اختراق قاعدة بيانات كلمة المرور!</span>',
+                        '<span class="lang-en">Uploading your personal data...</span><span class="lang-ar" style="display:none;">جاري تحميل بياناتك الشخصية...</span>',
+                        '<span class="lang-en">Webcam access granted! Taking screenshots...</span><span class="lang-ar" style="display:none;">تم منح حق الوصول إلى كاميرا الويب! جاري التقاط لقطات الشاشة...</span>',
+                        '<span class="lang-en">Downloading sensitive information...</span><span class="lang-ar" style="display:none;">جاري تنزيل المعلومات الحساسة...</span>'
+                    ];
+                    
+                    const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+                    createPopup(randomMessage, Math.random() > 0.5);
+                }
+            }, 10000);
+            
+            // Typing effect for terminal-text elements
+            const terminalTexts = document.querySelectorAll('.terminal-text');
+            terminalTexts.forEach((text, index) => {
+                const originalText = text.textContent;
+                text.textContent = '';
+                text.style.display = 'block';
+                
+                // Add typing animation with delay based on index
+                setTimeout(() => {
+                    let i = 0;
+                    const typing = setInterval(() => {
+                        if (i < originalText.length) {
+                            text.textContent += originalText.charAt(i);
+                            i++;
+                        } else {
+                            clearInterval(typing);
+                        }
+                    }, 50);
+                }, index * 1000);
+            });
+        });
+    </script>
+</body>
+</html>
